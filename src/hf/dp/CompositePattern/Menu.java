@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Menu extends MenuComponent{
-    ArrayList menuComponents = new ArrayList<MenuComponent>();
+    Iterator iterator = null;
+    ArrayList<MenuComponent> menuComponents = new ArrayList<MenuComponent>();
     public String name;
     public String description;
 
@@ -27,10 +28,18 @@ public class Menu extends MenuComponent{
     public String getDescription () { return description; }
 
     public void print() {
-        Iterator iterator = menuComponents.iterator();
-        while (iterator.hasNext()) {
-            MenuComponent menuComponent = (MenuComponent)iterator.next();
-            menuComponent.print();
+        Iterator iterator = (Iterator) menuComponents.iterator();
+        if (iterator.hasNext()) {
+            do {
+                MenuComponent menuComponent = (MenuComponent) iterator.next();
+                menuComponent.print();
+            } while (iterator.hasNext());
         }
+    }
+
+    public Iterator createIterator() {
+        if (iterator == null)
+            iterator = new CompositeIterator(menuComponents.iterator());
+        return iterator;
     }
 }

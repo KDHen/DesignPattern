@@ -1,5 +1,7 @@
 package hf.dp.CompositePattern;
 
+import java.util.Iterator;
+
 public class MenuItem extends MenuComponent{
     String name;
     String description;
@@ -28,5 +30,9 @@ public class MenuItem extends MenuComponent{
         if (this.isVegetarian()) System.out.println("(v)");
         System.out.println(", " + getPrice());
         System.out.println(" --" + getDescription());
+    }
+
+    public Iterator createIterator() {
+        return new NullIterator();
     }
 }

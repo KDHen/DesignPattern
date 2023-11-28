@@ -1,5 +1,7 @@
 package hf.dp.CompositePattern;
 
+import java.util.Iterator;
+
 public class MenuComponent {
     public void add(MenuComponent menuComponent) {
         throw new UnsupportedOperationException();
@@ -28,6 +30,10 @@ public class MenuComponent {
     }
 
     public void print() {
+        throw new UnsupportedOperationException();
+    }
+
+    public Iterator createIterator()  {
         throw new UnsupportedOperationException();
     }
 }

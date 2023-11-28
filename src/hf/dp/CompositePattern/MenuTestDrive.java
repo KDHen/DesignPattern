@@ -22,6 +22,6 @@ public class MenuTestDrive {
                 "Pancakes with fried eggs, sausage", false, 2.99));
 
         Waitress waitress = new Waitress(allMenus);
-        waitress.printMenu();
+        waitress.printVegetarianMenu();
     }
 }

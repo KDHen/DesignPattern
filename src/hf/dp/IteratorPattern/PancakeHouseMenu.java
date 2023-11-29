@@ -3,9 +3,9 @@ package hf.dp.IteratorPattern;
 import java.util.ArrayList;
 
 public class PancakeHouseMenu {
-    ArrayList menuItems;
+    ArrayList<MenuItem> menuItems;
     public PancakeHouseMenu( ) {
-        menuItems = new ArrayList( );
+        menuItems = new ArrayList<MenuItem>( );
         addItem("Regular Pancake Breakfast",
                 "ancakes with fried eggs, sausage", false, 2.99);
         addItem("Blueberry pancakes",

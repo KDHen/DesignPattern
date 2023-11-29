@@ -32,7 +32,7 @@ public class MenuItem extends MenuComponent{
         System.out.println(" --" + getDescription());
     }
 
-    public Iterator createIterator() {
+    public Iterator<MenuItem> createIterator() {
         return new NullIterator();
     }
 }

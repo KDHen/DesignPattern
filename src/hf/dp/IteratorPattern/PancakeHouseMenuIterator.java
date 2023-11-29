@@ -1,8 +1,9 @@
 package hf.dp.IteratorPattern;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class PancakeHouseMenuIterator implements Iterator{
+public class PancakeHouseMenuIterator implements Iterator<MenuItem> {
     ArrayList<MenuItem> items;
     int position = 0;
     public PancakeHouseMenuIterator(ArrayList<MenuItem> items) {
@@ -16,5 +17,4 @@ public class PancakeHouseMenuIterator implements Iterator{
     public boolean hasNext() {
         return position < items.size();
     }
-
 }

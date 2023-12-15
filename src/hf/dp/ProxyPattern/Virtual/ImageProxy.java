@@ -45,9 +45,6 @@ class ImageProxy implements Icon {
 						try {
 							setImageIcon(new ImageIcon(imageURL, "CD Cover"));
 							ImageIcon icon = new ImageIcon(imageURL, "CD Cover");
-							if (icon.getImageLoadStatus() == MediaTracker.ERRORED) {
-								System.out.println("Image load error");
-							}
 							c.repaint();
 						} catch (Exception e) {
 							e.printStackTrace();

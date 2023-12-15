@@ -33,7 +33,7 @@ public class GumballMachine {
  
 	public void turnCrank() {
 		state.turnCrank();
-		//state.dispense();
+		state.dispense();
 	}
 
 	void setState(State state) {

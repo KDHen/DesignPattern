@@ -1,14 +1,21 @@
 package hf.dp.AbstractFactoryPattern;
 
+import hf.dp.AbstractFactoryPattern.AbstractFactory.PizzaStore;
+import hf.dp.AbstractFactoryPattern.AbstractFactory.Concrete.ChicagoPizzaStore;
+import hf.dp.AbstractFactoryPattern.AbstractFactory.Concrete.NYPizzaStore;
+import hf.dp.AbstractFactoryPattern.AbstractProduct.Pizza;
+import hf.dp.StrategyPattern.MyHWInfo;
+
 public class pizzaTestDrive {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		MyHWInfo.printInfo();
 		PizzaStore nyStore = new NYPizzaStore();
-//		PizzaStore chicagoStore = new ChicagoPizzaStore();
-//		
+		PizzaStore chicagoStore = new ChicagoPizzaStore();
+		
 		Pizza pizza = nyStore.orderPizza("cheese"); 
-		System.out.println("Ethanordereda"+pizza.getName()); 
-//		Pizza pizza = chicagoStore.orderPizza("cheese"); 
-//		System.out.println("Joelordereda"+pizza.getName());
+		System.out.println("Ethan ordered a "+pizza.getName() + "\n"); 
+		
+		Pizza pizza1 = chicagoStore.orderPizza("cheese"); 
+		System.out.println("Joelo rdered a "+pizza1.getName());
 	}
 }

@@ -1,7 +1,11 @@
 package hf.dp.CommandPattern;
 
+import hf.dp.StrategyPattern.MyHWInfo;
+
 public class TestDrive {
 	public static void main(String[] args) {
+		MyHWInfo.printInfo();
+		
 		Lamp lamp = new Lamp();
 		Command lampOnCommand = new LampOnCommand(lamp);
 		Button button1 = new Button(lampOnCommand);

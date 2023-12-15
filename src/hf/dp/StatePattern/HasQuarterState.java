@@ -9,7 +9,7 @@ public class HasQuarterState implements State {
 	public HasQuarterState(GumballMachine gumballMachine) {
 		this.gumballMachine = gumballMachine;
 	}
-  
+
 	public void insertQuarter() {
 		System.out.println("You can't insert another quarter");
 	}
